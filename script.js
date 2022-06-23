@@ -2,15 +2,37 @@ var wins = 0;
 var losses = 0;
 var ties = 0;
 
-let playGame = prompt("Rock, paper, or scissors?");
-switch(playGame) {
-    case "Rock":
-    text = "You've chosen rock.";
-    break;
+let choices = ["Rock", "Paper", "Scissors"]
 
-    case "Scissors":
-    text = "You've chosen scissors.";
-    break;
+let playerChoice = prompt("Rock, Paper, or Scissors?");
 
-    case "Paper":
+var computerChoice(Math.floor(Math.random(3)));
+
+if (playerChoice === computerChoice) {
+    return "It's a tie!"
+} 
+
+if (playerChoice === "Rock" && computerChoice === "Paper") {
+    return "You lost!"
+} 
+
+if (playerChoice === "Rock" && computerChoice === "Scissors") {
+    return "You won!"
 }
+
+if (playerChoice === "Paper" && computerChoice === "Rock") {
+    return "You won!"
+} 
+
+if (playerChoice === "Paper" && computerChoice === "Scissors") {
+    return "You lost!"
+} 
+
+if (playerChoice === "Scissors" && computerChoice === "Paper") {
+    return "You won!"
+} 
+
+if (playerChoice === "Scissors" && computerChoice === "Rock") {
+    return "You lost!"
+} 
+
